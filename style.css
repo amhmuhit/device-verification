@@ -1,0 +1,150 @@
+
+/* =================================
+   DEVICE VERIFICATION DESIGN
+   Telebot Creator Mini App
+================================= */
+
+:root {
+    color-scheme: dark;
+    font-family: Arial, sans-serif;
+    background: #10151f;
+    color: #f4f7fb;
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main body */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(
+        135deg,
+        #10151f,
+        #172538,
+        #10151f
+    );
+}
+
+/* Verification card */
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 25px;
+    text-align: center;
+
+    background: #182231;
+    border: 1px solid #293548;
+    border-radius: 22px;
+
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
+}
+
+/* Logo */
+
+.logo {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #153f35;
+    color: #5ee0ad;
+
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Heading */
+
+h1 {
+    font-size: 25px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+    color: #ffffff;
+}
+
+/* Status text */
+
+#status {
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #c3cedd;
+
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+
+/* Retry button */
+
+button {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2ea6ff;
+    color: #071523;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #168fe8;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 25px;
+
+    color: #8795a8;
+    font-size: 12px;
+}
+
+/* Hidden elements */
+
+[hidden] {
+    display: none !important;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 480px) {
+    .card {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
