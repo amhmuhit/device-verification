@@ -93,11 +93,13 @@ async function startVerification() {
             const result = await response.json();
 
             if (!response.ok || !result.ok) {
-                showError(
-                    result.message || "Device verification failed."
-                );
-                return;
-            }
+    showError(
+        result.error ||
+        result.message ||
+        "Device verification failed. HTTP Status: " + response.status
+    );
+    return;
+}
 
             // Verification request accepted
             setStatus(
