@@ -182,9 +182,11 @@ console.log("TBC WEBHOOK RESPONSE:", webhookText);
 
 
     return jsonResponse({
-      ok: true,
-      message: "Verification data received"
-    });
+  ok: true,
+  message: "Webhook HTTP request completed",
+  webhook_status: webhookResponse.status,
+  webhook_response: webhookText
+});
 
   } catch (error) {
     console.error("Device verification error:", error);
