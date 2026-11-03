@@ -94,10 +94,9 @@ async function startVerification() {
 
             if (!response.ok || !result.ok) {
     showError(
-        result.error ||
-        result.message ||
-        "Device verification failed. HTTP Status: " + response.status
-    );
+    "HTTP: " + response.status +
+    " | RESPONSE: " + JSON.stringify(result)
+);
     return;
 }
 
