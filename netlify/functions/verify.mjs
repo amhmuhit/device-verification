@@ -168,11 +168,18 @@ export default async (req, context) => {
     });
 
     if (!webhookResponse.ok) {
-      return jsonResponse(
-        { ok: false, error: "TBC verification service failed" },
-        502
-      );
-    }
+  const errorText = await webhookResponse.text();
+
+  console.error("TBC WEBHOOK FAILED:", {
+    status: webhookResponse.status,
+    response: errorText
+  });
+
+  return jsonResponse(
+    { ok: false, error: "TBC verification service failed" },
+    502
+  );
+}
 
     return jsonResponse({
       ok: true,
