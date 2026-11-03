@@ -167,19 +167,19 @@ export default async (req, context) => {
       })
     });
 
+    const webhookText = await webhookResponse.text();
+
+console.log("TBC WEBHOOK STATUS:", webhookResponse.status);
+console.log("TBC WEBHOOK RESPONSE:", webhookText);
+
     if (!webhookResponse.ok) {
-  const errorText = await webhookResponse.text();
-
-  console.error("TBC WEBHOOK FAILED:", {
-    status: webhookResponse.status,
-    response: errorText
-  });
-
-  return jsonResponse(
-    { ok: false, error: "TBC verification service failed" },
-    502
-  );
+  return jsonResponse({
+    ok: false,
+    error: "TBC webhook failed",
+    status: webhookResponse.status
+  }, 502);
 }
+
 
     return jsonResponse({
       ok: true,
