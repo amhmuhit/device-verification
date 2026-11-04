@@ -1,17 +1,19 @@
-
-/* =================================
-   DEVICE VERIFICATION DESIGN
-   Telebot Creator Mini App
-================================= */
+/* =====================================
+   THUNDER BOOST TG
+   LIQUID GLASS - iOS PREMIUM DESIGN
+===================================== */
 
 :root {
     color-scheme: dark;
-    font-family: Arial, sans-serif;
-    background: #10151f;
-    color: #f4f7fb;
+
+    font-family: -apple-system, BlinkMacSystemFont,
+                 "SF Pro Display", "Segoe UI", Arial, sans-serif;
+
+    background: #071426;
+    color: #ffffff;
 }
 
-/* Reset */
+/* RESET */
 
 * {
     margin: 0;
@@ -19,132 +21,617 @@
     box-sizing: border-box;
 }
 
-/* Main body */
+/* BODY */
 
 body {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    background: linear-gradient(
-        135deg,
-        #10151f,
-        #172538,
-        #10151f
-    );
+
+    padding: 24px 18px;
+
+    position: relative;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 35%,
+            #174d82 0%,
+            transparent 48%
+        ),
+        linear-gradient(
+            145deg,
+            #020914,
+            #0b1d32,
+            #061326
+        );
 }
 
-/* Verification card */
+/* AMBIENT LIGHTS */
+
+.ambient {
+    position: fixed;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+.ambient-one {
+    background: #078bff;
+
+    top: -80px;
+    left: -90px;
+}
+
+.ambient-two {
+    background: #00baff;
+
+    bottom: -100px;
+    right: -70px;
+}
+
+.ambient-three {
+    background: #2454a8;
+
+    top: 40%;
+    right: -150px;
+}
+
+/* MAIN CARD */
 
 .card {
     width: 100%;
     max-width: 420px;
-    padding: 35px 25px;
+
+    padding: 32px 24px 27px;
+
+    position: relative;
+    z-index: 2;
+
     text-align: center;
 
-    background: #182231;
-    border: 1px solid #293548;
-    border-radius: 22px;
+    overflow: hidden;
 
-    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
+    border-radius: 34px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.17),
+            rgba(255,255,255,0.045) 45%,
+            rgba(30,120,210,0.12)
+        );
+
+    border: 1px solid rgba(190,230,255,0.35);
+
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.48),
+        inset 0 1px 1px rgba(255,255,255,0.35),
+        inset 0 -1px 1px rgba(100,190,255,0.18);
 }
 
-/* Logo */
+/* GLASS HIGHLIGHT */
 
-.logo {
-    width: 65px;
-    height: 65px;
+.card::before {
+    content: "";
 
-    margin: 0 auto 22px;
+    position: absolute;
+
+    top: -100px;
+    right: -80px;
+
+    width: 260px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(120,205,255,0.16);
+
+    filter: blur(55px);
+
+    pointer-events: none;
+}
+
+.card::after {
+    content: "";
+
+    position: absolute;
+
+    left: -70px;
+    bottom: -130px;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(0,125,255,0.18);
+
+    filter: blur(60px);
+
+    pointer-events: none;
+}
+
+/* BRAND */
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 28px;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 20px;
+    border-radius: 14px;
 
-    background: #153f35;
-    color: #5ee0ad;
+    background: linear-gradient(
+        145deg,
+        #42caff,
+        #0863e9
+    );
 
-    font-size: 35px;
-    font-weight: bold;
+    border: 1px solid rgba(180,230,255,0.65);
+
+    box-shadow:
+        0 5px 20px rgba(0,140,255,0.45),
+        inset 0 1px 3px rgba(255,255,255,0.5);
 }
 
-/* Heading */
+.brand-icon svg {
+    width: 27px;
+    height: 27px;
+
+    filter: drop-shadow(
+        0 2px 5px rgba(0,80,255,0.5)
+    );
+}
+
+.brand-name {
+    font-size: 19px;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+.brand-name span {
+    color: #54caff;
+}
+
+/* LOGO */
+
+.logo-container {
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.logo-ring {
+    position: absolute;
+
+    width: 135px;
+    height: 135px;
+
+    border: 2px solid rgba(83,195,255,0.65);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 25px rgba(0,145,255,0.4),
+        inset 0 0 25px rgba(0,145,255,0.15);
+
+    animation: pulse 2.5s infinite;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 28px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(100,210,255,0.35),
+        rgba(0,100,230,0.2)
+    );
+
+    border: 1px solid rgba(180,230,255,0.7);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 35px rgba(0,100,255,0.35),
+        inset 0 2px 8px rgba(255,255,255,0.35);
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.logo svg {
+    width: 80px;
+    height: 80px;
+
+    filter: drop-shadow(
+        0 5px 10px rgba(0,90,255,0.4)
+    );
+}
+
+/* HEADING */
 
 h1 {
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 27px;
+    font-weight: 800;
 
-    margin-bottom: 15px;
+    letter-spacing: -0.8px;
+
+    margin-bottom: 12px;
 
     color: #ffffff;
 }
 
-/* Status text */
+/* DESCRIPTION */
 
-#status {
+.description {
+    max-width: 290px;
+
+    margin: 0 auto 25px;
+
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.65;
 
-    color: #c3cedd;
-
-    min-height: 50px;
-    margin-bottom: 20px;
+    color: #d2e2f2;
 }
 
-/* Retry button */
+/* STATUS BOX */
+
+.status-box {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 17px;
+
+    border-radius: 19px;
+
+    text-align: left;
+
+    background: rgba(255,255,255,0.075);
+
+    border: 1px solid rgba(200,230,255,0.19);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,0.1);
+}
+
+.status-icon {
+    width: 12px;
+    height: 12px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #42caff;
+
+    box-shadow:
+        0 0 12px #42caff;
+}
+
+.status-dot {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: inherit;
+
+    animation: statusPulse 1.5s infinite;
+}
+
+#status {
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: #e2f1ff;
+
+    overflow-wrap: anywhere;
+}
+
+/* LOADER */
+
+.loader {
+    width: 42px;
+    height: 42px;
+
+    margin: 25px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-ring {
+    width: 40px;
+    height: 40px;
+
+    border: 4px solid rgba(100,190,255,0.15);
+
+    border-top-color: #40caff;
+
+    border-radius: 50%;
+
+    animation: spin 0.9s linear infinite;
+}
+
+/* RETRY BUTTON */
 
 button {
     width: 100%;
 
-    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    border: none;
-    border-radius: 12px;
+    gap: 10px;
 
-    background: #2ea6ff;
-    color: #071523;
+    padding: 16px 20px;
 
-    font-size: 15px;
-    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.45);
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        110deg,
+        #36c7ff,
+        #0879f9,
+        #0750d9
+    );
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 800;
 
     cursor: pointer;
-    transition: 0.2s;
+
+    box-shadow:
+        0 8px 25px rgba(0,115,255,0.4),
+        inset 0 1px 2px rgba(255,255,255,0.5);
+
+    transition: transform 0.2s, filter 0.2s;
 }
 
 button:hover {
-    background: #168fe8;
+    filter: brightness(1.12);
 }
 
 button:active {
-    transform: scale(0.97);
+    transform: scale(0.96);
 }
 
-/* Footer */
+.button-icon {
+    width: 21px;
+    height: 21px;
 
-.footer {
-    margin-top: 25px;
+    flex-shrink: 0;
 
-    color: #8795a8;
+    transition: transform 0.4s ease;
+}
+
+button:hover .button-icon {
+    transform: rotate(90deg);
+}
+
+.button-arrow {
+    width: 20px;
+    height: 20px;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+    transition: transform 0.25s ease;
+}
+
+button:hover .button-arrow {
+    transform: translateX(4px);
+}
+
+/* SECURITY FOOTER */
+
+.security-info {
+    margin-top: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.security-line {
+    display: none;
+}
+
+.footer-icon {
+    width: 29px;
+    height: 29px;
+
+    flex-shrink: 0;
+
+    color: #55d6ff;
+
+    filter: drop-shadow(
+        0 0 7px rgba(85,214,255,0.4)
+    );
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 3px;
+
+    font-size: 11px;
+
+    color: #b7c9dc;
+}
+
+.footer-text strong {
     font-size: 12px;
+
+    color: #ffffff;
 }
 
-/* Hidden elements */
+/* ANIMATIONS */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.95);
+        opacity: 0.65;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes statusPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+    }
+}
+
+/* HIDDEN */
 
 [hidden] {
     display: none !important;
 }
 
-/* Mobile responsive */
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 480px) {
+
+    body {
+        padding: 18px;
+    }
+
     .card {
-        padding: 30px 20px;
+        padding: 28px 21px 25px;
+
+        border-radius: 30px;
+    }
+
+    .brand {
+        margin-bottom: 23px;
+    }
+
+    .logo-container {
+        width: 135px;
+        height: 135px;
+    }
+
+    .logo-ring {
+        width: 125px;
+        height: 125px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .logo svg {
+        width: 73px;
+        height: 73px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}
+
+/* SMALL SCREEN */
+
+@media (max-width: 350px) {
+
+    .card {
+        padding: 25px 17px;
     }
 
     h1 {
         font-size: 22px;
+    }
+
+    .status-box {
+        padding: 13px;
     }
 }
