@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#10151f">
+    <meta name="theme-color" content="#071426">
 
-    <title>Device Verification</title>
+    <title>Thunder Boost - Device Verification</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -15,24 +14,184 @@
 
 <body>
 
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
     <main class="card">
 
-        <div class="logo">
-            ✓
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="brand-icon">
+
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M27 4L11 26H22L19 44L37 19H26L27 4Z"
+                          fill="url(#brandGradient)"
+                          stroke="#B9EEFF"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"/>
+
+                    <defs>
+                        <linearGradient id="brandGradient"
+                                        x1="0" y1="0"
+                                        x2="1" y2="1">
+                            <stop offset="0%" stop-color="#FFFFFF"/>
+                            <stop offset="45%" stop-color="#64D7FF"/>
+                            <stop offset="100%" stop-color="#0874FF"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+            </div>
+
+            <div class="brand-name">
+                Thunder <span>Boost TG</span>
+            </div>
+
         </div>
+
+
+        <!-- SECURITY LOGO -->
+
+        <div class="logo-container">
+
+            <div class="logo-ring"></div>
+
+            <div class="logo">
+
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+
+                    <path d="M50 8 L86 23 V48 C86 70 70 85 50 94 C30 85 14 70 14 48 V23 Z"
+                          fill="url(#shieldGradient)"
+                          stroke="#8bdfff"
+                          stroke-width="2"/>
+
+                    <path d="M32 51 L44 63 L69 37"
+                          fill="none"
+                          stroke="white"
+                          stroke-width="8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+
+                    <defs>
+                        <linearGradient id="shieldGradient"
+                                        x1="0" y1="0"
+                                        x2="1" y2="1">
+                            <stop offset="0%" stop-color="#39c5ff"/>
+                            <stop offset="100%" stop-color="#0056d6"/>
+                        </linearGradient>
+                    </defs>
+
+                </svg>
+
+            </div>
+
+        </div>
+
+
+        <!-- HEADING -->
 
         <h1>Device Verification</h1>
 
-        <p id="status">
-            Preparing secure verification...
+        <p class="description">
+            We need to verify your device to
+            keep your account safe & secure.
         </p>
 
+
+        <!-- STATUS -->
+
+        <div class="status-box">
+
+            <div class="status-icon">
+                <span class="status-dot"></span>
+            </div>
+
+            <p id="status">
+                Preparing secure verification...
+            </p>
+
+        </div>
+
+
+        <!-- LOADER -->
+
+        <div class="loader" id="loader">
+
+            <div class="loader-ring"></div>
+
+        </div>
+
+
+        <!-- RETRY BUTTON -->
+
         <button id="retry" hidden>
-            Try Again
+
+            <svg class="button-icon"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 aria-hidden="true">
+
+                <path d="M20 7V3M20 7H16"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+
+                <path d="M20 7A8 8 0 1 0 21 13"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"/>
+
+            </svg>
+
+            <span>Try Again</span>
+
+            <svg class="button-arrow"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 aria-hidden="true">
+
+                <path d="M9 5L16 12L9 19"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+
+            </svg>
+
         </button>
 
-        <div class="footer">
-            Secure verification system
+
+        <!-- FOOTER -->
+
+        <div class="security-info">
+
+            <svg class="footer-icon"
+                 viewBox="0 0 32 32"
+                 fill="none"
+                 aria-hidden="true">
+
+                <path d="M16 3L27 7V15C27 22 22 27 16 30C10 27 5 22 5 15V7L16 3Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linejoin="round"/>
+
+                <path d="M11 16L14.5 19.5L21 12.5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+
+            </svg>
+
+            <div class="footer-text">
+                Secure verification system
+                <strong>Thunder Boost TG</strong>
+            </div>
+
         </div>
 
     </main>
